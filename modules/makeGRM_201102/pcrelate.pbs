@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=1:thinnode,mem=60gb,walltime=18000
+#PBS -N pcrelate
+cd $PBS_O_WORKDIR
+
+
+arr=(13 238)
+i=${MOAB_JOBARRAYINDEX}
+k=${arr[${i}]}
+
+Rscript pcrelate.R $k
+

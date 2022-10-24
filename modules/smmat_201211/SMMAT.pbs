@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=1:thinnode,mem=48gb,walltime=259200
+#PBS -N burdenTest
+cd $PBS_O_WORKDIR
+
+chr=${PBS_ARRAYID}
+nt=1
+test=$1
+Rscript Main.R ${chr} ${nt} ${test}

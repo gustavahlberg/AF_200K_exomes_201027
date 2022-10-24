@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=8:thinnode,mem=24gb,walltime=86400
+#PBS -N calcCADD
+cd $PBS_O_WORKDIR
+
+
+#chr=${MOAB_JOBARRAYINDEX}
+chr=${PBS_ARRAYID}
+nt=8
+#chr=19
+echo $chr
+bash runCADD.sh ${chr} ${nt}
+
+

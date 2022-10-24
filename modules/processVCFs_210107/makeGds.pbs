@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=4,mem=32gb,walltime=36000
+#PBS -N makeGds
+cd $PBS_O_WORKDIR
+
+
+bash makeGds.sh ${MOAB_JOBARRAYINDEX}

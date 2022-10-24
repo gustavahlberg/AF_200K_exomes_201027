@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=1:thinnode,mem=32gb,walltime=180000
+#PBS -N null_model_hf
+cd $PBS_O_WORKDIR
+
+
+##i=${MOAB_JOBARRAYINDEX}
+
+Rscript make_nullmodel_HF_201213.R 

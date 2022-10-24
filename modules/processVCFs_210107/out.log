@@ -1,0 +1,12 @@
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /home/projects/cu_10039/projects/AF_200K_exomes_201027/modules/processVCFs_210107/intermediate/ukb23156_c1_b9_v1.split.vcf.gz
+
+Using zlib version: 1.2.7
+Warning: Expected at least 2 parts in FORMAT entry: ID=RNC,Number=2,Type=Character,Description="Reason for No Call in GT: . = n/a, M = Missing data, P = Partial data, I = gVCF input site is non-called, D = insufficient Depth of coverage, - = unrepresentable overlapping deletion, L = Lost/unrepresentable allele (other than deletion), U = multiple Unphased variants present, O = multiple Overlapping variants present, 1 = site is Monoallelic, no assertion about presence of REF or ALT allele">
+After filtering, kept 200643 out of 200643 Individuals
+After filtering, kept 18918 out of a possible 18918 Sites
+Run Time = 377.00 seconds

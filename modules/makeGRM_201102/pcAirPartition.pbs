@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=2:thinnode,mem=100gb,walltime=186400
+#PBS -N pcAirPartition
+cd $PBS_O_WORKDIR
+
+
+Rscript pcairePartition_2nddegree.R

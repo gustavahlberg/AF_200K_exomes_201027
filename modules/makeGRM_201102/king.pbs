@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=1:fatnode,mem=1000gb,walltime=186400
+#PBS -N makeGds
+cd $PBS_O_WORKDIR
+
+
+bash pcAirPipeline.sh

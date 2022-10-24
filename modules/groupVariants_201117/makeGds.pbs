@@ -1,0 +1,18 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=4:thinnode,mem=12gb,walltime=36000
+#PBS -N makegds
+cd $PBS_O_WORKDIR
+
+chr=${PBS_ARRAYID}
+#chr=${MOAB_JOBARRAYINDEX}
+cores=4
+vcfDir=intermediate
+vcfFile=ukb23156_c${chr}_v1.filter.miss.onlyinfo.annon.dbnsfp.geneset.vcf.gz
+vcf=${vcfDir}/${vcfFile}
+gds=${vcf%.vcf.gz}.gds
+
+Rscript makeGds.R $vcf $gds $cores
+
+

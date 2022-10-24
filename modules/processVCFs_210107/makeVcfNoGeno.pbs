@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=4,mem=16gb,walltime=72000
+#PBS -N makeVcfNoGeno
+cd $PBS_O_WORKDIR
+
+
+#bash makeVcfNoGeno.sh ${MOAB_JOBARRAYINDEX}
+bash makeVcfNoGeno.sh ${PBS_ARRAYID}

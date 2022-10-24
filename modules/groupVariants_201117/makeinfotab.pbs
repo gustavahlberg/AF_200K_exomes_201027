@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS group_list=cu_10039 -A cu_10039
+#PBS -m n 
+#PBS -l nodes=1:ppn=1:thinnode,mem=12gb,walltime=18000
+#PBS -N makeinfotab
+cd $PBS_O_WORKDIR
+
+
+#Rscript groupVariants.R ${MOAB_JOBARRAYINDEX}
+Rscript groupVariants.R ${PBS_ARRAYID}
+
+#Rscript tmp.R ${MOAB_JOBARRAYINDEX}
+
